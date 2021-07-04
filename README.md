@@ -28,6 +28,13 @@ $ dnf install -y tree-sitter
 $ dnf upgrade -y tree-sitter
 ```
 
+## Remove
+
+```
+$ dnf erase -y tree-sitter
+$ dnf copr remove pkgstore/tree-sitter
+```
+
 ## How to Build
 
 1. Get source from [src.fedoraproject.org](https://src.fedoraproject.org/rpms/tree-sitter).

@@ -1,7 +1,7 @@
 %global release_prefix          100
 
 Name:                           tree-sitter
-Version:                        0.20.0
+Version:                        0.20.6
 Release:                        %{release_prefix}%{?dist}
 Summary:                        An incremental parsing system for programming tools
 License:                        MIT
@@ -86,6 +86,18 @@ find %{buildroot}%{_libdir} -type f \( -name "*.la" -o -name "*.a" \) -delete -p
 
 
 %changelog
+* Mon Mar 28 2022 Package Store <mail@z17.dev> - 0.20.6-100
+- NEW: Tree-sitter v0.20.6.
+
+* Sat Jan 22 2022 Fedora Release Engineering <releng@fedoraproject.org> - 0.20.1-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_36_Mass_Rebuild
+
+* Wed Dec 01 2021 Andreas Schneider <asn@redhat.com> - 0.20.1-1
+- Update to version 0.20.1
+
+* Fri Jul 23 2021 Fedora Release Engineering <releng@fedoraproject.org> - 0.20.0-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_35_Mass_Rebuild
+
 * Sun Jul 04 2021 Package Store <kitsune.solar@gmail.com> - 0.20.0-100
 - UPD: Move to Package Store.
 - UPD: License.

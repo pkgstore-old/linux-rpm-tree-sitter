@@ -1,4 +1,4 @@
-%global release_prefix          100
+%global release_prefix          1000
 
 Name:                           tree-sitter
 Version:                        0.20.6
@@ -6,10 +6,8 @@ Release:                        %{release_prefix}%{?dist}
 Summary:                        An incremental parsing system for programming tools
 License:                        MIT
 URL:                            https://tree-sitter.github.io
-Vendor:                         Package Store <https://pkgstore.github.io>
-Packager:                       Kitsune Solar <kitsune.solar@gmail.com>
 
-Source0:                        https://github.com/tree-sitter/%{name}/archive/v%{version}/%{name}-%{version}.tar.gz
+Source0:                        %{name}-%{version}.tar.xz
 
 BuildRequires:                  gcc
 BuildRequires:                  make
@@ -61,7 +59,7 @@ developing applications that use %{name}.
 
 
 %build
-%set_build_flags
+%{set_build_flags}
 export PREFIX='%{_prefix}' LIBDIR='%{_libdir}'
 %{make_build}
 
@@ -86,7 +84,11 @@ find %{buildroot}%{_libdir} -type f \( -name "*.la" -o -name "*.a" \) -delete -p
 
 
 %changelog
-* Mon Mar 28 2022 Package Store <mail@z17.dev> - 0.20.6-100
+* Thu Mar 31 2022 Package Store <pkgstore@mail.ru> - 0.20.6-1000
+- UPD: Rebuild by Package Store.
+- UPD: File "tree-sitter.spec".
+
+* Mon Mar 28 2022 Package Store <pkgstore@mail.ru> - 0.20.6-100
 - NEW: Tree-sitter v0.20.6.
 
 * Sat Jan 22 2022 Fedora Release Engineering <releng@fedoraproject.org> - 0.20.1-2
@@ -97,10 +99,6 @@ find %{buildroot}%{_libdir} -type f \( -name "*.la" -o -name "*.a" \) -delete -p
 
 * Fri Jul 23 2021 Fedora Release Engineering <releng@fedoraproject.org> - 0.20.0-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_35_Mass_Rebuild
-
-* Sun Jul 04 2021 Package Store <kitsune.solar@gmail.com> - 0.20.0-100
-- UPD: Move to Package Store.
-- UPD: License.
 
 * Sat Jul 03 2021 Andreas Schneider <asn@redhat.com> - 0.20.0-2
 - Fixed libtree-sitter Require of devel package
